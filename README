@@ -1,0 +1,9 @@
+INSTALL NODEJS
+----------------------
+Centos: 
+    curl --silent --location https://rpm.nodesource.com/setup_5.x | bash -
+    yum install nodejs
+
+START SERVER
+----------------------
+node mirror.js &
