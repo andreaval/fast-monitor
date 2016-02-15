@@ -6,15 +6,13 @@
  * https://github.com/andreaval/fast-monitor/blob/master/LICENSE-MIT
  */
 'use strict';
-var cfg = require('./config.json');
+var cfg = require('./config');
 var url = require('url');
 
 require("http").createServer(function(req,response){
     var query = url.parse(req.url,true).query;
-    if(('r' in query)){
-        delete require.cache[require.resolve('./config.json')];
-        cfg = require('./config.json');
-    }
+    delete require.cache[require.resolve('./config')];
+    var cfg = require('./config');
     response.writeHeader(200, {"Content-Type": "text/html"});
     if(cfg.reserved){
         var ip = req.ip || req.connection.remoteAddress || req.socket.remoteAddress || req.connection.socket.remoteAddress;
