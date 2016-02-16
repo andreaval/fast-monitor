@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict';
 try{
     var cfg = require('./config');
