@@ -6,7 +6,7 @@
   "repository": "andreaval/fast-monitor",
   "author": "Andrea Vallorani <andrea.vallorani@gmail.com>",
   "tags": ["monitor","linux","admin"],
-  "files": ["monitor.js","config.json"],
+  "files": ["monitor.js","config.sample.js"],
   "bin": "monitor.js",
   "dependencies": {},
   "devDependencies": {},
