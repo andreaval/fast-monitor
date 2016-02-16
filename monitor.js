@@ -1,10 +1,3 @@
-/*
- * Fast-Monitor
- * Version 1.0.0
- * Copyright (c) 2016 Andrea Vallorani, contributors
- * Licensed under the MIT license.
- * https://github.com/andreaval/fast-monitor/blob/master/LICENSE-MIT
- */
 'use strict';
 try{
     var cfg = require('./config');
