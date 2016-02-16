@@ -1,9 +1,15 @@
-INSTALL NODEJS
-----------------------
-Centos: 
-    curl --silent --location https://rpm.nodesource.com/setup_5.x | bash -
-    yum install nodejs
+FAST-MONITOR
+============
 
-START SERVER
-----------------------
-node mirror.js &
+Fast-monitor executes the configured command and returns the output in HTML format.
+Quick and easy!
+
+
+Config.js example
+---------
+
+commands: [
+        ["uname -a","System information"],
+        ["date","System date"],
+        ["...","..."],
+]
