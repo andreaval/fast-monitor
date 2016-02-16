@@ -1,18 +1,22 @@
 {
-    "name": "fast-monitor",
-    "version": "1.0.0",
-    "description": "Fast monitoring solution for Linux server",
-    "main": "monitor.js",
-    "bin": "./monitor.js",
-    "homepage": "https://github.com/andreaval/fast-monitor",
-    "repository":{
-        "type": "git",
-        "url": "https://github.com/andreaval/fast-monitor.git"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Andrea Vallorani <andrea.vallorani@gmail.com>",
-    "tags": ["monitor","linux server","admin"],
-    "license": "MIT"
+  "name": "fast-monitor",
+  "version": "1.0.1",
+  "description": "Fast monitoring solution for Linux server",
+  "main": "monitor.js",
+  "bin": "./monitor.js",
+  "homepage": "https://github.com/andreaval/fast-monitor",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreaval/fast-monitor.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrea Vallorani <andrea.vallorani@gmail.com>",
+  "tags": [
+    "monitor",
+    "linux server",
+    "admin"
+  ],
+  "license": "MIT"
 }
