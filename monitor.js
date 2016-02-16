@@ -15,7 +15,7 @@ catch(e){
 }
 var url = require('url');
 
-require("http").createServer(function(req,response){
+exports.start = require("http").createServer(function(req,response){
     var query = url.parse(req.url,true).query;
     delete require.cache[require.resolve('./config')];
     var cfg = require('./config');
