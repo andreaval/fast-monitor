@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "Fast monitoring solution for Linux server",
     "main": "monitor.js",
+    "bin": "./monitor.js",
     "homepage": "https://github.com/andreaval/fast-monitor",
     "repository":{
         "type": "git",
