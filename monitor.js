@@ -5,7 +5,7 @@ try{
     var cfg = require(cfg_file);
 }
 catch(e){
-    console.log('ERROR: '+cfg_file+' file not found');
+    console.log('ERROR: '+cfg_file+'.js file not found');
     process.exit(1);
 }
 var url = require('url');
