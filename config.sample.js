@@ -20,5 +20,5 @@ module.exports = {
         ip: "",
         password: ""
     },
-    port: process.env.PORT || 1800
+    port: process.env.PORT || 1818
 };
