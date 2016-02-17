@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 'use strict';
-var cfg_file = 'config/default.js';
+var cfg_file = '/usr/etc/fast-monitor.js';
 try{
     var cfg = require(cfg_file);
 }
