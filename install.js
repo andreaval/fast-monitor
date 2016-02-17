@@ -1,8 +1,9 @@
 #! /usr/bin/env node
+var base = require.resolve('./config.sample.js');
 try{
-    require('child_process').execSync("cp -n config.sample.js /usr/etc/fast-monitor.js");
+    require('child_process').execSync("cp -n "+base+" /usr/etc/fast-monitor.js");
 }
 catch(e){
-    console.log(e);
-    console.log('\nRun command: cp -n /usr/lib/node_modules/fast-monitor/config.sample.js /usr/etc/fast-monitor.js');
+    console.log('Installation failed :(');
+    console.log('\nRun this command manually:\n\n cp -n '+base+' /usr/etc/fast-monitor.js\n');
 }
