@@ -12,7 +12,7 @@ npm install fast-monitor -g
 
 Setup
 ---------
-Edit the '/usr/local/etc/fast-monitor.js' file to add custom commands
+Edit the '/usr/etc/fast-monitor.js' file to add custom commands
 ```javascript
 commands: [
         ["uname -a","System information"],
