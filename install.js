@@ -5,3 +5,4 @@ try{
 catch(e){
     console.log(e);
 }
+console.log('\nRun command: cp -n /usr/lib/node_modules/fast-monitor/config.sample.js /usr/etc/fast-monitor.js');
