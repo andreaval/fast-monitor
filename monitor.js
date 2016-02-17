@@ -29,11 +29,10 @@ exports.start = require("http").createServer(function(req,response){
             return;
         }
     }
-    response.write('<style>div{border-top:1px solid #999}b{background:#cdd;display:block;padding:0 .2em}i{font-weight:normal}</style>');
+    response.write('<style>div{border-top:1px solid #999}b{background:#cdd;display:block;padding:0 .2em}i{font:italic .9em monospace}</style>');
     cfg.commands.forEach(function(cmd){
         response.write('<div>');
-        var desc = (cmd[1]==="") ? "" : " <i>("+cmd[1]+")</i>";
-        response.write('<b>'+cmd[0]+desc+'</b>');
+        response.write('<b>'+cmd[1]+' <i>('+cmd[0]+')</i></b>');
         try{
             var out = require('child_process').execSync(cmd[0]);
             response.write('<pre>'+out.toString()+'</pre>');
