@@ -1,18 +1,18 @@
 module.exports = {
     commands: [
         ["ps -A | grep node","Nodejs process"],
-        //["cat /etc/*-release | tail -n 1","Distro"],
+        //["cat /etc/*-release | tail -1","Distro"],
         ["uname -a","System information"],
         ["date","System date"],
         ["df -h","Disk space"],
-        //["free -h","Ram"],
+        ["free -h","Ram"],
         //["nmap -sT localhost","Open ports"],
         ["httpd -v","Apache"],
         ["php -v","PHP"],
         //["mysql --version","Mysql"],
-        //["head -4 /var/www/html/phpmyadmin/ChangeLog","PhpMyadmin"],
+        //["head -4 /var/www/html/phpmyadmin/ChangeLog | tail -1","PhpMyadmin"],
         //["postconf -d mail_version","Postfix"],
-        //["du -h -d 1 /backup/","Last day backup"],
+        //["du -h -d 1 /backup/","Backup size"],
         //["crontab -l","User cron"]
     ],
     auth: {
