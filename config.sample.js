@@ -1,19 +1,19 @@
-var cfg = {
+module.exports = {
     commands: [
-        ["ps -A | grep node","Node process"],
-        //["cat /etc/*-release | tail -n 1",""],
+        ["ps -A | grep node","Nodejs process"],
+        //["cat /etc/*-release | tail -n 1","Distro"],
         ["uname -a","System information"],
         ["date","System date"],
         ["df -h","Disk space"],
-        //["free -h",""],
-        //["nmap -sT localhost",""],
+        //["free -h","Ram"],
+        //["nmap -sT localhost","Open ports"],
         ["httpd -v","Apache"],
-        ["php -v",""],
-        //["mysql --version",""],
-        //["head -4 /var/www/html/phpmyadmin/ChangeLog",""],
-        //["postconf -d mail_version",""],
-        //["du -h -d 1 /backup/",""],
-        //["crontab -l",""]
+        ["php -v","PHP"],
+        //["mysql --version","Mysql"],
+        //["head -4 /var/www/html/phpmyadmin/ChangeLog","PhpMyadmin"],
+        //["postconf -d mail_version","Postfix"],
+        //["du -h -d 1 /backup/","Last day backup"],
+        //["crontab -l","User cron"]
     ],
     auth: {
         ip: "",
@@ -21,4 +21,3 @@ var cfg = {
     },
     port: process.env.PORT || 1800
 };
-module.exports = cfg;

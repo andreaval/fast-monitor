@@ -1,18 +1,19 @@
 #!/usr/bin/env node
 'use strict';
+var cfg_file = '/usr/local/etc/fast-monitor';
 try{
-    var cfg = require('./config');
+    var cfg = require(cfg_file);
 }
 catch(e){
-    console.log('Fast-Monitor ERROR: config.js file not found');
+    console.log('ERROR: '+cfg_file+' file not found');
     process.exit(1);
 }
 var url = require('url');
 
 exports.start = require("http").createServer(function(req,response){
     var query = url.parse(req.url,true).query;
-    delete require.cache[require.resolve('./config')];
-    var cfg = require('./config');
+    delete require.cache[require.resolve(cfg_file)];
+    var cfg = require(cfg_file);
     response.writeHeader(200, {"Content-Type": "text/html"});
     if(cfg.auth.ip || cfg.auth.password){
         var isAuth = false;
