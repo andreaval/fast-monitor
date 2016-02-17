@@ -1,6 +1,6 @@
 {
   "name": "fast-monitor",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "Fast monitoring solution for Linux server",
   "main": "monitor.js",
   "bin": "./monitor.js",
@@ -20,6 +20,11 @@
     "admin"
   ],
   "license": "MIT",
-  "engines" : { "node" : ">=0.12" },
-  "os" : [ "darwin", "linux" ]
+  "engines": {
+    "node": ">=0.12"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ]
 }
