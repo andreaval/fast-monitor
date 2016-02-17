@@ -14,7 +14,7 @@ exports.start = require("http").createServer(function(req,response){
     var query = url.parse(req.url,true).query;
     delete require.cache[require.resolve(cfg_file)];
     var cfg = require(cfg_file);
-    response.writeHeader(200, {"Content-Type": "text/html"});
+    response.setHeader("Server","Fast-Monitor 1.0");
     if(cfg.auth.ip || cfg.auth.password){
         var isAuth = false;
         if(cfg.auth.ip){
@@ -25,11 +25,13 @@ exports.start = require("http").createServer(function(req,response){
             isAuth = (('p' in query) && query.p!=="" && query.p===cfg.auth.password);
         }
         if(!isAuth){
+            response.writeHeader(401);
             response.write('Not authorized!');
             response.end();
             return;
         }
     }
+    response.writeHeader(200, {"Content-Type": "text/html"});
     response.write('<style>div{border-top:1px solid #999}b{background:#cdd;display:block;padding:0 .2em}i{font:italic .9em monospace}</style>');
     cfg.commands.forEach(function(cmd){
         response.write('<div>');
