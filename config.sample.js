@@ -13,6 +13,7 @@ module.exports = {
         //["head -4 /var/www/html/phpmyadmin/ChangeLog | tail -1","PhpMyadmin"],
         //["postconf -d mail_version","Postfix"],
         //["du -h -d 1 /backup/","Backup size"],
+        //["find /backup/ -mtime 0 -type f -printf \"%f\\n\"| tail -n 10","Last 10 backup files"],
         //["crontab -l","User cron"]
     ],
     auth: {
