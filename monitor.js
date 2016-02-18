@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 'use strict';
-var cfg_file = '/usr/etc/fast-monitor.js';
+var cfg_file = '/usr/etc/fast-monitor';
 try{
     var cfg = require(cfg_file);
 }
 catch(e){
-    console.log('ERROR: '+cfg_file+'.js file not found');
+    console.log('ERROR: '+cfg_file+'.js file not found or syntax error in the file');
     process.exit(1);
 }
 var url = require('url');
