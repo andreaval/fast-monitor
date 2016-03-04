@@ -1,0 +1,19 @@
+# How to run Fast-monitor as a service (Centos 7,Debian 8):
+#
+# cp -n ./fast-monitor.service /lib/systemd/system/fast-monitor.service 
+# ln -s /lib/systemd/system/fast-monitor.service /etc/systemd/system/fast-monitor.service 
+# systemctl daemon-reload
+# systemctl start fast-monitor
+# systemctl enable fast-monitor
+# systemctl list-units --type service
+
+[Unit]
+Description=Fast-Monitor Server
+After=syslog.target network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/fast-monitor
+
+[Install]
+WantedBy=multi-user.target
