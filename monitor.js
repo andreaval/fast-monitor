@@ -31,7 +31,7 @@ exports.start = require("http").createServer(function(req,response){
             return;
         }
     }
-    response.writeHeader(200, {"Content-Type": "text/html"});
+    response.writeHeader(200, {"Content-Type": "text/html; charset=utf-8"});
     response.write('<style>div{border-top:1px solid #999}b{background:#cdd;display:block;padding:0 .2em}i{font:italic .9em monospace}</style>');
     cfg.commands.forEach(function(cmd){
         response.write('<div>');

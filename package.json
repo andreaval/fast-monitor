@@ -1,6 +1,6 @@
 {
   "name": "fast-monitor",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "Fast monitoring solution for Linux server",
   "main": "monitor.js",
   "bin": "./monitor.js",
